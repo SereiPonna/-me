@@ -26,7 +26,7 @@ class LoginController extends Controller
     {
         $loginTel = $request->input('login-tel');
         $request->session()->put('login-tel', $loginTel);
-        return view('welcome');
+        return redirect('/');
     }
 
     /**
