@@ -18,3 +18,5 @@ Route::get('/', 'PostController@index');
 Route::post('/create', 'PostController@create');
 
 Route::post('/message', 'MessageController@send');
+
+Route::post('/receiver', 'ApiController@receive');
