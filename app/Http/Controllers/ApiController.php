@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use SMSReceiver;
+use SMSSender;
 use SMSServiceException;
 
 ini_set('error_log', 'error.log');
@@ -24,22 +25,20 @@ class ApiController extends Controller
         $serverurl = "http://104.236.198.23/receiver";
 
         try {
-
+            error_log('=================================================================');
             $receiver = new SMSReceiver(file_get_contents('php://input'));
             $content = $receiver->getMessage();
-            error_log('=================================================================');
             error_log($content);
             error_log('------------------------------------------------------------------');
 
-//    $content = preg_replace('/\s{2,}/', ' ', $content);
-//    $address = $receiver->getAddress();
-//    $requestId = $receiver->getRequestID();
-//    $applicationId = $receiver->getApplicationId();
-//
-//
-//    $sender = new SMSSender($serverurl, $applicationId, $password);
-//
-//
+    $content = preg_replace('/\s{2,}/', ' ', $content);
+    $address = $receiver->getAddress();
+    $requestId = $receiver->getRequestID();
+    $applicationId = $receiver->getApplicationId();
+
+    $sender = new SMSSender($serverurl, $applicationId, $password);
+    $sender->sendMessage("Please come again", $address);
+
 //    list($key, $second) = explode(" ", $content);
 //
 //    if ($second == "hash") {
