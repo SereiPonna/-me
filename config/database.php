@@ -1,20 +1,5 @@
 <?php
 
-$host = null;
-$username = null;
-$password = null;
-$database = null;
-
-if(!is_null(env('DATABASE_URL')))
-{
-    $url = parse_url(env("DATABASE_URL"));
-
-    $host = $url["host"];
-    $username = $url["user"];
-    $password = $url["pass"];
-    $database = substr($url["path"], 1);
-}
-
 return [
 
     /*
@@ -28,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql_codeship'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -91,32 +76,6 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
-        ],
-
-        'pgsql_codeship' => [
-            'driver' => 'pgsql',
-            'host' => 'localhost',
-            'port' => '5432',
-            'database' => 'development',
-            'username' => env('PGUSER'),
-            'password' => env('PGPASSWORD'),
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-            'sslmode' => 'prefer',
-        ],
-
-        'pgsql_heroku' => [
-            'driver' => 'pgsql',
-            'host' => $host,
-            'port' => 5432,
-            'database' => $database,
-            'username' => $username,
-            'password' => $password,
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-            'sslmode' => 'prefer',
         ],
 
     ],

@@ -12,7 +12,9 @@
                     </div>
                     @foreach( $posts as $post)
                         @include('post')
+                        @include('message-modal')
                     @endforeach
+
                 </div>
             </div>
         </div>

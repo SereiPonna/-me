@@ -12,7 +12,6 @@
                     {{ $post->body }}
                 </p>
                 <a href="#" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#message-modal">Message</a>
-                @include('message-modal')
             </div>
         </div>
     </div>
