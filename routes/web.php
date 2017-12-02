@@ -14,7 +14,7 @@
 Route::get('/login', 'LoginController@index');
 Route::post('/login' , 'LoginController@login');
 
-Route::get('/posts', 'PostController@index');
+Route::get('/', 'PostController@index');
 Route::post('/create', 'PostController@create');
 
 Route::post('/message', 'MessageController@send');
