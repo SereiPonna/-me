@@ -14,7 +14,7 @@ include 'API/lib/SMSReceiver.php';
 class ApiController extends Controller
 {
     public function receive() {
-
+        error_log('===========******************************===============');
         $Happycount = 0;
         $Shapecount = 0;
         $Sadcount = 0;
