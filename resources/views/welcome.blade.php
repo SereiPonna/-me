@@ -38,7 +38,7 @@
                 width: 100%;
                 height: 100%;
                 color: #000;
-                background: url('/img/spark.jpg') no-repeat bottom center scroll;
+                background: url('/img/spark.jpg') no-repeat bottom center ;
                 background-size: cover;
                 
                 

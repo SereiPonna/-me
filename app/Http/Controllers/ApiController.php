@@ -31,13 +31,13 @@ class ApiController extends Controller
             error_log($content);
             error_log('------------------------------------------------------------------');
 
-    $content = preg_replace('/\s{2,}/', ' ', $content);
-    $address = $receiver->getAddress();
-    $requestId = $receiver->getRequestID();
-    $applicationId = $receiver->getApplicationId();
-
-    $sender = new SMSSender($serverurl, $applicationId, $password);
-    $sender->sendMessage("Please come again", $address);
+//    $content = preg_replace('/\s{2,}/', ' ', $content);
+//    $address = $receiver->getAddress();
+//    $requestId = $receiver->getRequestID();
+//    $applicationId = $receiver->getApplicationId();
+//
+//    $sender = new SMSSender($serverurl, $applicationId, $password);
+//    $sender->sendMessage("Please come again", $address);
 
 //    list($key, $second) = explode(" ", $content);
 //
