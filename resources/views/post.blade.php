@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
            
-            <div  class="col-md-9 pt-3">
+            <div class="col-md-9 pt-3">
                 <i style="font-size: 75px" class="material-icons">child_care</i> 
                 <h3 class="card-title">{{ $post->title }}</h3>
                             

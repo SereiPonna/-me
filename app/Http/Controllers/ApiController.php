@@ -56,8 +56,6 @@ class ApiController extends Controller
 
     public function send()
     {
-
-
         $client = new Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
         ]);
@@ -73,7 +71,6 @@ class ApiController extends Controller
             )]
         );
 
-        error_log($response);
     }
 
 }
