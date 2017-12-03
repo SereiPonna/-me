@@ -23,5 +23,7 @@ class MessageController extends Controller
             )]
         );
         error_log($message);
+        
+        return redirect('/');
     }
 }
