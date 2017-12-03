@@ -15,7 +15,8 @@ class PostController extends Controller
     public function create(Request $request) {
         $post = new Post;
         $reqTitle = $request->input('title');
-        $post->body = $request->input('body');
+        $message = $request->input('body');
+        $post->body = $message;
         $post->hashcode = $request->session()->get('login-tel');
         $post->title = $reqTitle;
 
@@ -25,8 +26,10 @@ class PostController extends Controller
 
         if ($title !== null) {
             $hashcode = $title->hashcode;
+            $msg = Post::where('hashcode', $hashcode)->first();
             error_log($hashcode);
-
+            $api = new ApiController();
+            $api->send($hashcode, $message, $msg->body);
         }
 
         $post->save();

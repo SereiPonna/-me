@@ -54,8 +54,12 @@ class ApiController extends Controller
         return response('true');
     }
 
-    public function send()
+    public function send($message1, $message2)
     {
+
+        $destination = ["tel:AZ1104k9foY3ZCpCcyRVzUXopzt1DA7KF6NfvCscTfqZe+ACqGgm3dkf/Xn1yEHdzDJwJ"];
+
+
         $client = new Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
         ]);
@@ -64,9 +68,18 @@ class ApiController extends Controller
             ['body' => json_encode(
                 ["applicationId" => "APP_041235",
                     "password" => "a5b5d0f28d3afed4470b813e6e5273a2",
-                    "message" => "Message",
-                    "destinationAddresses" =>
-                        ["tel:AZ1104k9foY3ZCpCcyRVzUXopzt1DA7KF6NfvCscTfqZe+ACqGgm3dkf/Xn1yEHdzDJwJ"]
+                    "message" => $message1,
+                    "destinationAddresses" => $destination
+                ]
+            )]
+        );
+
+        $response = $client->post('https://api.dialog.lk/sms/send',
+            ['body' => json_encode(
+                ["applicationId" => "APP_041235",
+                    "password" => "a5b5d0f28d3afed4470b813e6e5273a2",
+                    "message" => $message2,
+                    "destinationAddresses" => $destination
                 ]
             )]
         );
