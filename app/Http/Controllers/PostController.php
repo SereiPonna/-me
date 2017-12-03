@@ -13,26 +13,26 @@ class PostController extends Controller
     }
 
     public function create(Request $request) {
-        $post = new Post;
+        $newPost = new Post;
         $reqTitle = $request->input('title');
         $message = $request->input('body');
-        $post->body = $message;
-        $post->hashcode = $request->session()->get('login-tel');
-        $post->title = $reqTitle;
+        $newPost->body = $message;
+        $newPost->hashcode = $request->session()->get('login-tel');
+        $newPost->title = $reqTitle;
 
-        $post->save();
+        $oldPost = Post::where('title', $reqTitle)->first();
 
-        $title = Post::where('title', $reqTitle)->first();
+        if ($oldPost !== null) {
+            $hashcode = $oldPost->hashcode;
+            $matchPost = Post::where('hashcode', $hashcode)->first();
 
-        if ($title !== null) {
-            $hashcode = $title->hashcode;
-            $msg = Post::where('hashcode', $hashcode)->first();
+            $body = $matchPost->body;
             error_log($hashcode);
             $api = new ApiController();
-            $api->send($hashcode, $message, $msg->body);
+            $api->send($message, $body);
         }
 
-        $post->save();
+        $newPost->save();
         return redirect('/');
     }
 }

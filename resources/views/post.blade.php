@@ -1,8 +1,11 @@
 <div class="col-sm-6">
 <div class="card">
     <div class="container-fluid">
-        <div class="row">   
-            <div class="col-md-3 d-flex bg-success p-5">
+        <div class="row">
+            <div class="col-md-3 d-flex p-5">
+                
+            </div>
+            <div class="col-md-9 pt-3">
                 <i style="font-size: 75px" class="material-icons">child_care</i> 
                 <h3 class="card-title">{{ $post->title }}</h3>
                             
@@ -10,7 +13,7 @@
 
                     {{ $post->body }}
                 </p>
-                <button type="button" style="width: 407px" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#messageModal">
+                <button type="button" style="width: 100%; height: 35px; margin: 0 0 5px" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#messageModal">
                     Message
                 </button>
                 @include('message-modal')
