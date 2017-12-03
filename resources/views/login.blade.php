@@ -2,9 +2,11 @@
 
 @section('content')
     <!-- Navigation -->
+<div class="welcome">
+
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <img style="float: right; margin: 15px" src="img\logo-background.png" alt="Smart 4G+ Sim" width="125px"
+            <img src="img\logo-background.png" alt="Smart 4G+ Sim" width="125px"
                  height="80px"></a>
 
     </div>
@@ -37,8 +39,5 @@
             </div>
         </div>
     </div>
-
-    <div class="footer">
-        <p>Copyright &copy; SMART API HACKATHON 2017</p>
-    </div>
+</div>
 @endsection

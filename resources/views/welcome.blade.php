@@ -32,8 +32,8 @@
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <style>
-            body {
-                font-family:'Oleo Script', cursive;
+            #welcome {
+                font-family: 'Courgette', cursive;
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -41,6 +41,9 @@
                 background: url('/img/spark.jpg') no-repeat bottom center ;
                 background-size: cover;
                 
+            }
+
+            #container{
                 
             }
 
