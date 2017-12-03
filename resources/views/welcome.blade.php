@@ -31,6 +31,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <style>
@@ -44,6 +46,9 @@
                 background-blend-mode: 
 
             }*/
+            #btn_block{
+                width: inherit;
+            }
             .container, .pt-3{
                 font-family: 'Bitter', serif;
                 font-size: 22px;
@@ -56,7 +61,7 @@
                 margin: 5px;
             }
 
-            h1{
+            h2{
                  background-color: rgba(29, 165, 77, .9);
                  color: #fff;
             }
