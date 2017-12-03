@@ -53,6 +53,7 @@
                 font-family: 'Bitter', serif;
                 font-size: 22px;
                 text-align: center;
+                align-self: center;
                
 
             }

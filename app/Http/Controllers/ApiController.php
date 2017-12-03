@@ -69,7 +69,7 @@ class ApiController extends Controller
         $response = $client->post('https://api.dialog.lk/sms/send',
             [
                 'headers' => [
-                    'Content-Type' => 'application/json'
+                    'Content-Type' => 'application/x-www-form-urlencoded'
                 ],
                 'body' => $body
             ]
