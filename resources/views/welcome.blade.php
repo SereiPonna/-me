@@ -34,7 +34,8 @@
     <style>
             /* of post page*/
             .row{
-                background-image: url('img/intro-bg1.jpg') no-repeat center center scroll;
+                background: url('/img/intro-bg1.jpg') no-repeat center center scroll;
+                background-size: cover;
 
             }
 
