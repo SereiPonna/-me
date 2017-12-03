@@ -50,5 +50,7 @@ class ApiController extends Controller
         }catch(SMSServiceException $e){
             $logger->WriteLog($e->getErrorCode().' '.$e->getErrorMessage());
         }
+
+        return response(true);
     }
 }

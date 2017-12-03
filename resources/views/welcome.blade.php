@@ -34,7 +34,7 @@
     <style>
             /* of post page*/
             .bg.succes{
-                background-image: url(/img/child.jpg);
+
             }
 
             .welcome {
@@ -43,7 +43,7 @@
                 width: 100%;
                 height: 100%;
                 color: #000;
-                background: url('/img/spark.jpg') no-repeat bottom center visib ;
+                background: url('/img/spark.jpg') no-repeat bottom center visible;
                 background-size: cover;
                 
             }
