@@ -45,8 +45,7 @@ class ApiController extends Controller
 
             } else {
                 // Send a SMS to a particular user
-
-                $response = $sender->sms('I love your idea', $address);
+                $response=$sender->sms('I love your idea.', $address);
 
             }
         } catch (SMSServiceException $e) {
