@@ -58,6 +58,8 @@
 
             .col-sm-6{
                 margin: 5px;
+                display: table-row-group;
+                align-content: center;
 
             }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
 
 class MessageController extends Controller
 {
@@ -11,7 +12,7 @@ class MessageController extends Controller
         $message = $request->input('messageText');
 
         $destination = ["tel:AZ1104k9foY3ZCpCcyRVzUXopzt1DA7KF6NfvCscTfqZe+ACqGgm3dkf/Xn1yEHdzDJwJ"];
-        
+
         $client = new Client([
             'headers' => [ 'Content-Type' => 'application/json' ]
         ]);
