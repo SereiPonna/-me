@@ -6,7 +6,7 @@
 // Licence : MIT License
 // http://opensource.org/licenses/MIT
 // ==========================================
-
+namespace App\lib;
 class Logger{
 	public function WriteLog($logStream){
 		date_default_timezone_set('Asia/Colombo');

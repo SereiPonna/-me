@@ -6,7 +6,7 @@
 // Licence : MIT License
 // http://opensource.org/licenses/MIT
 // ==========================================
-
+namespace App\lib;
 require_once 'SMSServiceException.php';
 require_once 'core.php';
 class SMSSender  extends Core{

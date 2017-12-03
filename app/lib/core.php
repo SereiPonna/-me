@@ -8,6 +8,8 @@
 // http://opensource.org/licenses/MIT
 // ==========================================
 
+namespace App\lib;
+
 class Core
 {
 	

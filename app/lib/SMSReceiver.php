@@ -6,7 +6,7 @@
 // Licence : MIT License
 // http://opensource.org/licenses/MIT
 // ==========================================
-
+namespace App\lib;
 class SMSReceiver{
 	private $version;
 	private	$applicationId;		

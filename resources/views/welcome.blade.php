@@ -33,10 +33,8 @@
     <!-- Custom styles for this template -->
     <style>
             /* of post page*/
-            .row{
-                background: url('/img/intro-bg1.jpg') no-repeat center center scroll;
-                background-size: cover;
-
+            .bg.succes{
+                background-image: url(/img/child.jpg);
             }
 
             .welcome {
@@ -45,7 +43,7 @@
                 width: 100%;
                 height: 100%;
                 color: #000;
-                background: url('/img/spark.jpg') no-repeat bottom center scroll ;
+                background: url('/img/spark.jpg') no-repeat bottom center visib ;
                 background-size: cover;
                 
             }
