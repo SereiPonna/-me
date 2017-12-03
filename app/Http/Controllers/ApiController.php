@@ -45,7 +45,10 @@ class ApiController extends Controller
 
             } else {
                 // Send a SMS to a particular user
+                error_log("*******************");
+                error_log($message);
                 $response = $sender->sms($message, $address);
+                error_log($message);
             }
         } catch (SMSServiceException $e) {
             $logger->WriteLog($e->getErrorCode() . ' ' . $e->getErrorMessage());
