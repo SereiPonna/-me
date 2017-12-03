@@ -1,94 +1,50 @@
 <?php
+// ==========================================
+// Ideamart : Sample PHP SMS API
+// ==========================================
+// Author : Pasindu De Silva
+// Licence : MIT License
+// http://opensource.org/licenses/MIT
+// ==========================================
 
-namespace App\Http\Controllers;
+ini_set('error_log', 'sms-app-error.log');
+require_once 'lib/Log.php';
+require_once 'lib/SMSReceiver.php';
+require_once 'lib/SMSSender.php';
 
-use Illuminate\Http\Request;
-use SMSReceiver;
-use SMSSender;
-use SMSServiceException;
+define('SERVER_URL', 'http://104.236.198.23/receiver');
+define('APP_ID', 'APP_041235');
+define('APP_PASSWORD', 'a5b5d0f28d3afed4470b813e6e5273a2');
 
-ini_set('error_log', 'error.log');
-include 'API/lib/SMSSender.php';
-include 'API/lib/SMSReceiver.php';
+$logger = new Logger();
 
-class ApiController extends Controller
-{
-    public function receive() {
-        error_log('===========******************************===============');
-        $Happycount = 0;
-        $Shapecount = 0;
-        $Sadcount = 0;
+try{
 
-        date_default_timezone_set("Asia/Colombo");
-        $password = "a5b5d0f28d3afed4470b813e6e5273a2";
-        $applicationId = "APP_041235";
-        $serverurl = "http://104.236.198.23/receiver";
+    // Creating a receiver and intialze it with the incomming data
+    $receiver = new SMSReceiver(file_get_contents('php://input'));
 
-        try {
-            error_log('=================================================================');
-            $receiver = new SMSReceiver(file_get_contents('php://input'));
-            $content = $receiver->getMessage();
-            error_log($content);
-            error_log('------------------------------------------------------------------');
+    //Creating a sender
+    $sender = new SMSSender( SERVER_URL, APP_ID, APP_PASSWORD);
 
-//    $content = preg_replace('/\s{2,}/', ' ', $content);
-//    $address = $receiver->getAddress();
-//    $requestId = $receiver->getRequestID();
-//    $applicationId = $receiver->getApplicationId();
-//
-//    $sender = new SMSSender($serverurl, $applicationId, $password);
-//    $sender->sendMessage("Please come again", $address);
+    $message = $receiver->getMessage(); // Get the message sent to the app
+    $address = $receiver->getAddress();	// Get the phone no from which the message was sent
 
-//    list($key, $second) = explode(" ", $content);
-//
-//    if ($second == "hash") {
-//
-//        $boradmsg = substr($content, 9);
-//
-//        $url = "https://language.googleapis.com/v1/documents:analyzeSentiment?key=<key>";
-//
-//        $ch = curl_init($url);
-//
-//        $json = array("encodingType" => "UTF8", "document" => array("type" => "PLAIN_TEXT", "content" => $boradmsg));
-//        $encode_data = json_encode($json, JSON_NUMERIC_CHECK | JSON_FORCE_OBJECT);
-//        curl_setopt($ch, CURLOPT_POST, 1);
-//        curl_setopt($ch, CURLOPT_POSTFIELDS, $encode_data);
-//        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//        curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
-//
-//        $response = curl_exec($ch);
-//        $decode = json_decode($response, true);
-//        curl_close($ch);
-//
-//        error_log("Broadcast Message " . $content);
-//
-//        $emotion = $decode['documentSentiment']['score'];
-//
-//
-//        if ($emotion > 0.25) {
-//            $Happycount++;
-//            $sender->sendMessage("Please come again", $address);
-//        } elseif ($emotion < 0.25 && $emotion > -0.25) {
-//            $Shapecount++;
-//            $sender->sendMessage("We are happy to have you", $address);
-//        } elseif ($emotion < -0.25) {
-//            $Sadcount++;
-//            $sender->sendMessage("Oops! We will improve the quality of the food.", $address);
-//        }
-//
-//
-//        $response = $sender->broadcastMessage($boradmsg);
-            //}
-//    else {
-//
-//        error_log("Message received " . $content);
-//        $sender->sendMessage("Oops! Check the format. It should be SHOP<space>food<space>and enter your feeling about the food." . $second, $address);
-//    }
+    $logger->WriteLog($receiver->getAddress());
 
 
-        } catch (SMSServiceException $e) {
-            error_log("*******************************++++++++++++++++++**********************************");
-            error_log("Passed Exception-not working " . $e);
-        }
+    if ($message=='broadcast') {
+
+        // Send a broadcast message to all the subcribed users
+        $response = $sender->broadcast("This is a broadcast message to all the subcribers of the application");
+
+    }else{
+
+        // Send a SMS to a particular user
+        $response=$sender->sms('This message is sent only to one user', $address);
     }
+
+}catch(SMSServiceException $e){
+    $logger->WriteLog($e->getErrorCode().' '.$e->getErrorMessage());
 }
+
+?>

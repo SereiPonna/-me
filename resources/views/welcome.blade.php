@@ -33,6 +33,10 @@
     <!-- Custom styles for this template -->
     <style>
             /* of post page*/
+            .row{
+                background-image: url('img/intro-bg1.jpg') no-repeat center center scroll;
+
+            }
 
             .welcome {
                 font-family: 'Courgette', cursive;

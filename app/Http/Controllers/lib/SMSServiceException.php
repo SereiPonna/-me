@@ -1,11 +1,11 @@
 <?php
-
-/*
-
-	Author  : S S Rajapaksha <ssrajapaksha@outlook.com>
-	Licence : Apache License, Version 2.0
-
-*/
+// ==========================================
+// Ideamart : PHP SMS API Exception Class
+// ==========================================
+// Author : Pasindu De Silva
+// Licence : MIT License
+// http://opensource.org/licenses/MIT
+// ==========================================
 
 class SMSServiceException extends Exception{
 	private $statusCode,
