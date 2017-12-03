@@ -2,7 +2,7 @@
 <div class="card">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 d-flex p-5">
+            <div class="col-md-3 d-flex bg-success p-5">
                 
             </div>
             <div style=" float: left"; class="col-md-9 pt-3">
