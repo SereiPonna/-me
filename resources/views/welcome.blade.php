@@ -57,10 +57,10 @@
             }
 
             .col-sm-6{
-                margin: 5px;
-                display: table-row-group;
                 align-content: center;
-
+                margin: 5px;
+                display: grid;
+                
             }
 
             h2{
@@ -72,7 +72,7 @@
 
             .welcome {
                 font-family: 'Courgette', cursive;
-                position: absolute;
+                position: relative;
                 width: 100%;
                 height: 100%;
                 color: #000;

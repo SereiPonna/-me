@@ -8,11 +8,11 @@
                     <div class="col-lg-12">
                         <div class="panel_head_post_page">
                             <h2>
-                            Smart#me
-                        </h2>
-                        <p class="lead">Right time and Right person</p>    
+                                Smart#me
+                            </h2>
+                            <p class="lead">Right time and Right person</p>
                         </div>
-                        
+
                         @include('post-modal')
                     </div>
                     @foreach( $posts as $post)
