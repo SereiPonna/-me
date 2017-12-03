@@ -11,7 +11,10 @@
                 <p class="card-text">
                     {{ $post->body }}
                 </p>
-                <a href="#" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#message-modal">Message</a>
+                <button type="button" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#messageModal">
+                    Message
+                </button>
+                @include('message-modal')
             </div>
         </div>
     </div>

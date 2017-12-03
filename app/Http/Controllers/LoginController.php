@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Logger;
+
+
 
 class LoginController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +19,7 @@ class LoginController extends Controller
     {
         return view('login');
     }
+
 
     /**
      * Show the form for creating a new resource.

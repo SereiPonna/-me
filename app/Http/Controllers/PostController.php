@@ -14,9 +14,19 @@ class PostController extends Controller
 
     public function create(Request $request) {
         $post = new Post;
-        $post->title = $request->input('title');
+        $reqTitle = $request->input('title');
         $post->body = $request->input('body');
-        $post->tel = $request->session()->get('login-tel');
+        $post->hashcode = $request->session()->get('login-tel');
+        $post->title = $reqTitle;
+
+        $post->save();
+
+        $title = Post::where('title', $reqTitle)->first();
+
+        if ($title !== null) {
+            $hashcode = $title->hashcode;
+            error_log($hashcode);
+        }
 
         $post->save();
         return redirect('/');

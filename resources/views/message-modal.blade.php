@@ -11,7 +11,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/create" method="post">
+                <form action="/message" method="post">
+                    {{ csrf_field() }}
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="messageText" class="col-form-label">Message:</label>
