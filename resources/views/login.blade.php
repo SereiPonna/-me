@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Navigation -->
-<div class="welcome">
+<div class = "welcome">
 
     <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -20,6 +20,7 @@
                         <h1 class="brand-heading">smart#me</h1>
                         <p class="intro-text"><i>"find me find you connect together"</i>
                             <br>Created by MIS</p>
+                             <i class="material-icons">face</i>     
                         <!-- Link to the post page-->
                         <!--inline style is used -->
                         <form action="/login" method="POST" class="form">

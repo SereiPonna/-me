@@ -28,7 +28,7 @@ class ApiController extends Controller
 
             $message = $receiver->getMessage(); // Get the message sent to the app
             $address = $receiver->getAddress();	// Get the phone no from which the message was sent
-            error_log($receiver);
+            error_log($address);
             error_log($address);
             $auth = new Auth;
             $auth->tel = $address;
