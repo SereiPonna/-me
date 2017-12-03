@@ -30,12 +30,37 @@
   
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <style>
             /* of post page*/
-            .bg.succes{
+
+            /*bg-success{
+                background-image: url(/img/child.jpg);
+                width: 100px;
+                height: 100px;
+                background-size: cover;
+                background-blend-mode: 
+
+            }*/
+            .container, .pt-3{
+                font-family: 'Bitter', serif;
+                font-size: 22px;
+                text-align: center;
+               
 
             }
+
+            .col-sm-6{
+                margin: 5px;
+            }
+
+            h1{
+                 background-color: rgba(29, 165, 77, .9);
+                 color: #fff;
+            }
+            /*post page end*/
 
             .welcome {
                 font-family: 'Courgette', cursive;
@@ -43,7 +68,7 @@
                 width: 100%;
                 height: 100%;
                 color: #000;
-                background: url('/img/spark.jpg') no-repeat bottom center visible;
+                background: url('/img/spark.jpg') no-repeat bottom center scroll;
                 background-size: cover;
                 
             }
@@ -54,7 +79,8 @@
 
             html {
                 width: 100%;
-                height: 100%
+                height: 100%;
+
             }
 
             h1,

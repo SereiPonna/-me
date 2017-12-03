@@ -2,10 +2,8 @@
 <div class="card">
     <div class="container-fluid">
         <div class="row">
+            <img src="/img/child.jpg" width="100px" height="100px">
             <div class="col-md-3 d-flex bg-success p-5">
-
-                </h1>
-                <h1 class="mx-auto align-self-center">
 
             </div>
             <div class="col-md-9 py-3">

@@ -7,6 +7,9 @@
 // http://opensource.org/licenses/MIT
 // ==========================================
 namespace App\lib;
+
+use Exception;
+
 class SMSServiceException extends Exception{
 	private $statusCode,
 	$statusDetail;

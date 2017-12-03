@@ -7,6 +7,7 @@
 // http://opensource.org/licenses/MIT
 // ==========================================
 namespace App\lib;
+
 require_once 'SMSServiceException.php';
 require_once 'core.php';
 class SMSSender  extends Core{
@@ -23,7 +24,7 @@ class SMSSender  extends Core{
 	/* Send the server name, app password and app id
 	*	Dialog Production Severurl : HTTPS : - https://api.dialog.lk/sms/send
 	*				     HTTP  : - http://api.dialog.lk:8080/sms/send
-	*/		
+	*/
 	public function __construct($serverURL, $applicationId, $password)
 	{
 		if(!(isset($serverURL, $applicationId, $password)))

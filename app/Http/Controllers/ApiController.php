@@ -14,8 +14,6 @@ class ApiController extends Controller
 {
     public function receive() {
 
-
-
         define('SERVER_URL', 'https://api.dialog.lk/sms/send');
         define('APP_ID', 'APP_041235');
         define('APP_PASSWORD', 'a5b5d0f28d3afed4470b813e6e5273a2');
@@ -51,6 +49,6 @@ class ApiController extends Controller
             $logger->WriteLog($e->getErrorCode().' '.$e->getErrorMessage());
         }
 
-        return response(true);
+        return response('true');
     }
 }
