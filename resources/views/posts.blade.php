@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container pt-3">
-        <div class="row">
-            <div class="col-12 col-sm-10 ">
+        <div style="align-items: center;" class="row">
+            <div class="col-12 col-sm-10 mx-auto">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="panel_head_post_page">

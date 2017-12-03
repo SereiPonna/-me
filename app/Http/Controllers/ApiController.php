@@ -57,23 +57,22 @@ class ApiController extends Controller
     public function send()
     {
 
-        $body = ["applicationId" => "APP_041235",
-            "password" => "a5b5d0f28d3afed4470b813e6e5273a2",
-            "message" => "Message",
-            "destinationAddresses" =>
-                ["tel:AZ1104k9foY3ZCpCcyRVzUXopzt1DA7KF6NfvCscTfqZe+ACqGgm3dkf/Xn1yEHdzDJwJ"]
-        ];
 
-        $client = new Client();
+        $client = new Client([
+            'headers' => [ 'Content-Type' => 'application/json' ]
+        ]);
 
         $response = $client->post('https://api.dialog.lk/sms/send',
-            [
-                'headers' => [
-                    'Content-Type' => 'application/x-www-form-urlencoded'
-                ],
-                'body' => $body
-            ]
+            ['body' => json_encode(
+                ["applicationId" => "APP_041235",
+                    "password" => "a5b5d0f28d3afed4470b813e6e5273a2",
+                    "message" => "Message",
+                    "destinationAddresses" =>
+                        ["tel:AZ1104k9foY3ZCpCcyRVzUXopzt1DA7KF6NfvCscTfqZe+ACqGgm3dkf/Xn1yEHdzDJwJ"]
+                ]
+            )]
         );
+
         error_log($response);
     }
 
