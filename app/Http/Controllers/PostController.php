@@ -26,6 +26,7 @@ class PostController extends Controller
         if ($title !== null) {
             $hashcode = $title->hashcode;
             error_log($hashcode);
+
         }
 
         $post->save();
