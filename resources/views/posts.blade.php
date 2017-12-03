@@ -6,10 +6,13 @@
             <div class="col-12 col-sm-10 mx-auto">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>
-                            #me
+                        <div class="panel_head_post_page">
+                            <h1>
+                            Smart#me
                         </h1>
-                        <p class="lead">Thanks to the new spacing utility classes there's a lot you can do.</p>
+                        <p class="lead">Find right conversation partner rather than obsessed with amount of Likes and Shares</p>    
+                        </div>
+                        
                         @include('post-modal')
                     </div>
                     @foreach( $posts as $post)

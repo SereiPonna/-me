@@ -32,19 +32,21 @@
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <style>
-            #welcome {
+            /* of post page*/
+
+            .welcome {
                 font-family: 'Courgette', cursive;
                 position: absolute;
                 width: 100%;
                 height: 100%;
                 color: #000;
-                background: url('/img/spark.jpg') no-repeat bottom center ;
+                background: url('/img/spark.jpg') no-repeat bottom center scroll ;
                 background-size: cover;
                 
             }
 
             #container{
-                
+
             }
 
             html {
@@ -95,14 +97,7 @@
                 border-radius: 15px;
             }
 
-            #mainNav {
-                font-family: Cabin, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                margin-bottom: 0;
-                text-transform: uppercase;
-                border-bottom: 1px solid rgba(255, 255, 255, .3);
-                background-color: rgba(100,100,100,.2);
-            }
-
+            
             @media (min-width:992px) {
                 #mainNav {
                     padding-top: 20px;
