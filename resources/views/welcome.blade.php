@@ -27,7 +27,7 @@
 
     <!-- Custom fonts for this template 
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
-  
+
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
@@ -43,7 +43,7 @@
                 width: 100px;
                 height: 100px;
                 background-size: cover;
-                background-blend-mode: 
+                background-blend-mode:
 
             }*/
 
@@ -52,7 +52,7 @@
                 font-size: 22px;
                 text-align: center;
 
-               
+
 
             }
 
@@ -60,7 +60,7 @@
                 align-content: center;
                 margin: 5px;
                 display: grid;
-                
+
             }
 
             h2{
@@ -78,10 +78,6 @@
                 color: #000;
                 background: url('/img/spark.jpg') no-repeat bottom center scroll;
                 background-size: cover;
-                
-            }
-
-            #container{
 
             }
 
@@ -134,7 +130,7 @@
                 border-radius: 15px;
             }
 
-            
+
             @media (min-width:992px) {
                 #mainNav {
                     padding-top: 20px;
@@ -157,7 +153,7 @@
                     background-color: rgba(255, 255, 255, .3)
                 }
                 #mainNav .nav-link.active:hover {
-            
+
                 }
             }
 
@@ -203,7 +199,7 @@
                 }
             }
 
-            
+
             .content-section {
                 padding-top: 150px;
                 padding-bottom: 150px
@@ -222,10 +218,6 @@
                 #map {
                     height: 350px
                 }
-            }
-
- 
-            
             }
 
             footer {

@@ -3,17 +3,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 d-flex bg-success p-5">
-                
             </div>
-            <div style=" float: left"; class="col-md-9 pt-3">
-                <i style="font-size: 75px" class="material-icons">child_care</i> 
+            <div style=" float: left" class="col-md-9 py-3">
+                <i style="font-size: 75px" class="material-icons">child_care</i>
                 <h3 class="card-title">{{ $post->title }}</h3>
-                            
                  <p class="card-text">
-
                     {{ $post->body }}
                 </p>
-                <button type="button" style=" vertical-align: text-top; width: 100%; height: 35px; " class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#messageModal">
+                <button type="button" class="btn btn-outline-success btn-block" data-toggle="modal" data-target="#messageModal">
                     Message
                 </button>
                 @include('message-modal')
