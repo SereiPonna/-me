@@ -46,25 +46,25 @@
                 background-blend-mode: 
 
             }*/
-            #btn_block{
-                width: inherit;
-            }
+
             .container, .pt-3{
                 font-family: 'Bitter', serif;
                 font-size: 22px;
                 text-align: center;
-                align-self: center;
+
                
 
             }
 
             .col-sm-6{
                 margin: 5px;
+
             }
 
             h2{
                  background-color: rgba(29, 165, 77, .9);
                  color: #fff;
+                 border-radius: 25px;
             }
             /*post page end*/
 
